@@ -17,7 +17,7 @@
                     <nav class="main-nav">
                         <a class="logofull" href="./index.html"><span class="logo">Web</span><span class="logo-black">Studio</span></a>
                         <ul class="menu-nav">
-                            <li class="link-nav"><a class="navlink" href="./index.html">Студия</a></li>
+                            <li class="link-nav"><a class="navlink current" href="./index.html">Студия</a></li>
                             <li class="link-nav"><a class="navlink" href="./portfolio.html">Портфолио</a></li>
                             <li class="link-nav"><a class="navlink" href="Контакты">Контакты</a></li>              
                         </ul>
@@ -39,10 +39,22 @@
                     </div>
                 </div>
             </header>
-<main>
+    <main>
     <section class="for-user">
+
         <h1 class="title-for-user">ЭФЕКТИВНЫЕ РЕШЕНИЯ</br> ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-        <button class="button-text" type="button">Заказать услугу</button>
+
+
+            <button data-modal-open class="button-text" type="button">Заказать услугу</button>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button data-modal-close class="but-close-modal">
+                    <svg class="icon-close-modal" width="30px" height="30px">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </section>
     <section class="benefits">
         <div class="container">
@@ -92,29 +104,32 @@
         <div class="container">
             <h2 class="title-about-us">Чем мы занимаемся</h2>
             <ul class="img-about-us">
-                <li>
+                <li class="img-list">
                     <img 
                     src="./images/photo1.jpg" 
                     alt="Рабочий стол" 
                     width="370"
                     height="294"
                     />
+                    <div class="type-img-about-us"> <p class="type-work">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p></div>
                 </li>
-                <li>    
+                <li class="img-list">    
                     <img 
                     src="./images/photo2.jpg" 
                     alt="Смартфон и десктоп"
                     width="370"
                     height="294"
                     />
+                    <div class="type-img-about-us"> <span class="type-work">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</span></div>
                 </li>
-                <li>
+                <li class="img-list">
                     <img 
                     src="./images/photo3.jpg" 
                     alt="Планшет с градуировкой цвета"
                     width="370"
                     height="294"
                     />
+                    <div class="type-img-about-us"> <span class="type-work">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</span></div>
             </ul>
             </div>
     </section>
@@ -367,5 +382,6 @@
                 </address>
                 </div>
             </footer>
+    <script src="./js/modal.js"></script>
     </body>
 </html>
